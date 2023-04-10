@@ -1,11 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>FirstAngular</title>
-    <base href="/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  </head>
-  <body></body>
-</html>
+<div class="container">
+  <h1>Angular Service</h1>
+  <!-- --------------- Создание сервисов ----------------------- -->
+  <div class="card">
+    <h2>App Counter : {{ appCounetrServise.counter }}</h2>
+    <button class="btn" (click)="appCounetrServise.increase()">+</button>
+    <button class="btn" (click)="appCounetrServise.decrease()">-</button>
+  </div>
+  <div class="card">
+    <h2>Local Counter : {{ newServiceService.counter }}</h2>
+    <button class="btn" (click)="newServiceService.increase()">+</button>
+    <button class="btn" (click)="newServiceService.decrease()">-</button>
+  </div>
+</div>
+<app-counter></app-counter>
