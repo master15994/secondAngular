@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AppCounterService } from '../service/counter-service';
+import { AppCounterService } from '../counter-service';
 
 @Component({
   selector: 'app-counter',

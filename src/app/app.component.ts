@@ -1,8 +1,8 @@
-import { Component, ErrorHandler } from '@angular/core';
-import { withNavigationErrorHandler } from '@angular/router';
+import { Component, ErrorHandler, OnInit } from '@angular/core';
 
-import { AppCounterService } from './service/counter-service';
 import { NewServiceService } from './service/local-acc-service.service';
+import { FormGroup } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +10,14 @@ import { NewServiceService } from './service/local-acc-service.service';
   styleUrls: ['./app.component.scss'],
   providers: [NewServiceService],
 })
-export class AppComponent {
-  constructor(
-    public appCounetrServise: AppCounterService,
-    public newServiceService: NewServiceService
-  ) {}
+export class AppComponent implements OnInit {
+  submit() {
+    console.log('Form submitted', this.form);
+  }
+
+  form!: FormGroup;
+
+  ngOnInit() {
+    this.form = new FormGroup({});
+  }
 }
